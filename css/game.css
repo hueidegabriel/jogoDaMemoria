@@ -1,0 +1,66 @@
+main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px ;
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0b5b13d9;
+  width: 100%;
+  height: 40px;
+  padding: 1em;
+  border-radius: 15px;
+  max-width: 800px ;
+  margin-bottom: 4vh;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.card{
+  aspect-ratio: 3/4;
+  width: 100%;
+  border-radius: 15px;
+  position: relative;
+  transition: all 0.8s ease;
+  transform-style: preserve-3d;
+}
+.face{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  border: 5px solid #0b5b13;
+  transition: all 400ms ease; 
+}
+.front{
+  
+  position: absolute;
+  transform: rotateY(180deg);
+}
+.back{
+  background-image: url(../images/back.png);
+  backface-visibility: hidden;
+}
+.reveal-card{
+  transform: rotateY(180deg);
+}
+.disable-card{
+  filter: saturate(0);
+  opacity: 0.7;
+}
+
